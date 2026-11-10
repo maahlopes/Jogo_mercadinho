@@ -1,0 +1,265 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff0d9;
+    color: #493728;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    min-height: 100vh;
+}
+
+#menu, #dayEnd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffc9df, #ffe9ad);
+}
+
+.menu-box {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    box-shadow: 0 8px 25px #0002;
+}
+
+h1 {
+    color: #ed6b9b;
+}
+
+.skins {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 13px;
+    border-radius: 12px;
+    background: #ffe0ed;
+    color: #693c52;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.04);
+    background: #ffc0d9;
+}
+
+.skins button.selected {
+    background: #ed6b9b;
+    color: white;
+    outline: 3px solid #ffb2cf;
+}
+
+.start-button {
+    background: #ed6b9b;
+    color: white;
+    font-size: 20px;
+    padding: 18px 35px;
+    margin-top: 15px;
+}
+
+header {
+    background: #ed6b9b;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header h1 {
+    color: white;
+    margin: 5px;
+}
+
+.stats {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 17px;
+}
+
+.game-info {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.market {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fffaf1;
+    border-radius: 20px;
+}
+
+.market h2 {
+    color: #b56d45;
+}
+
+.customers {
+    min-height: 95px;
+    background: #ffecd0;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.customer {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    animation: appear 0.4s;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shelves {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.shelf {
+    background: white;
+    border: 3px solid #d8a477;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px #0001;
+}
+
+.shelf h3 {
+    margin: 5px;
+}
+
+.product-icon {
+    font-size: 35px;
+    margin: 12px;
+}
+
+.stock {
+    background: #eee;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.stock-fill {
+    height: 100%;
+    background: #75c98b;
+    transition: width 0.3s;
+}
+
+.shelf button {
+    width: 100%;
+    margin-top: 8px;
+    background: #b8e7bd;
+}
+
+.shelf button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.actions button {
+    background: #b9dfff;
+    color: #244d70;
+}
+
+.employee {
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.employee select {
+    padding: 9px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.end-shift {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.end-shift button {
+    background: #735c9b;
+    color: white;
+    font-size: 18px;
+    padding: 18px 30px;
+}
+
+#dayEnd .menu-box {
+    padding: 45px;
+}
+
+@media (max-width: 600px) {
+    .skins {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .market {
+        padding: 12px;
+    }
+}
